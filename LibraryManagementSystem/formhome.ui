@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormHome</class>
+ <widget class="QWidget" name="FormHome">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>695</width>
+    <height>506</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <item row="5" column="0">
+    <widget class="QWidget" name="widget_2" native="true">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QToolButton" name="toolButton_refresh">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+        </property>
+        <property name="text">
+         <string>刷新</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButton_add">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+        </property>
+        <property name="text">
+         <string>增加</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButton_change">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>更改</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButton_BorrowOrReturn">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>借书</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="toolButton_remove">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>删除</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="TableView" name="tableView">
+     <property name="font">
+      <font>
+       <family>幼圆</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background:rgba(0,0,0,0)</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" rowspan="2">
+    <widget class="QWidget" name="widget" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>695</width>
+       <height>50</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>150</height>
+      </size>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>50</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>13</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>输入查询的书籍</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="comboBox">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <item>
+         <property name="text">
+          <string>书名</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>作者</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>种类</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>关键词</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>序号</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_Search">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font-size:15px</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkBox">
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>精准</string>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignVCenter">
+       <widget class="QToolButton" name="toolButton_Search">
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Microsoft YaHei UI Light</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+        </property>
+        <property name="text">
+         <string>查询</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Minimum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TableView</class>
+   <extends>QTableView</extends>
+   <header>tableview.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,25 @@
+@startuml LibraryManagementSystem
+
+title 注册
+
+start
+:点击登陆界面的注册;
+:跳转打开注册界面;
+->输入账号密码;
+:注册;
+while(两次密码是否一致？) is (不一致)
+    :弹窗提示：密码不一致;
+    :重新输入;
+endwhile(一致)
+while(用户名是否重复？) is(重复)
+    :弹窗提示：用户名或密码错误;
+    
+endwhile(不重复)
+    :保存用户信息;
+    :注册成功;
+    :跳转登陆界面;
+    
+    
+
+
+@enduml

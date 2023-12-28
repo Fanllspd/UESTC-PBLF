@@ -1,0 +1,58 @@
+{
+	"Books":	[{
+			"Id":	1,
+			"Title":	"法治的细节",
+			"Author":	"罗翔",
+			"Publisher":	"云南人民出版社",
+			"Publication_Date":	"2021.11",
+			"Lang":	"zh_CN",
+			"Copies_amount":	10,
+			"ISBN":	"9787222204331",
+			"Category":	"法学随笔集",
+			"Is_eBook":	true
+		}, {
+			"Id":	2,
+			"Title":	"计算机科学导论",
+			"Author":	"Thomas H. Cormen",
+			"Publisher":	"机械工业出版社",
+			"Publication_Date":	"2022.02",
+			"Lang":	"en_US",
+			"Copies_amount":	15,
+			"ISBN":	"9787111446668",
+			"Category":	"计算机科学",
+			"Is_eBook":	false
+		}, {
+			"Id":	3,
+			"Title":	"百年孤独",
+			"Author":	"加西亚·马尔克斯",
+			"Publisher":	"南海出版公司",
+			"Publication_Date":	"1982.05",
+			"Lang":	"es_ES",
+			"Copies_amount":	9,
+			"ISBN":	"9787544270873",
+			"Category":	"文学小说",
+			"Is_eBook":	true
+		}, {
+			"Id":	4,
+			"Title":	"人类简史",
+			"Author":	"尤瓦尔·赫拉利",
+			"Publisher":	"中信出版社",
+			"Publication_Date":	"2014.01",
+			"Lang":	"zh_CN",
+			"Copies_amount":	12,
+			"ISBN":	"9787508641394",
+			"Category":	"历史人类学",
+			"Is_eBook":	false
+		}, {
+			"Id":	5,
+			"Title":	"数据结构与算法",
+			"Author":	"Robert L. Kruse",
+			"Publisher":	"清华大学出版社",
+			"Publication_Date":	"2020.07",
+			"Lang":	"zh_CN",
+			"Copies_amount":	19,
+			"ISBN":	"9787302498489",
+			"Category":	"计算机科学",
+			"Is_eBook":	true
+		}]
+}

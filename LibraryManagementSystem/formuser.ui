@@ -1,0 +1,632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FormUser</class>
+ <widget class="QWidget" name="FormUser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>860</width>
+    <height>588</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="QWidget" name="widget" native="true">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <widget class="QFrame" name="frame_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>90</width>
+          <height>150</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>233</width>
+          <height>350</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">#frame_2{
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0);
+}</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="label_Avatar">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">/*
+min-width:  80px;
+max-width:  80px;
+min-height: 80px;
+max-height: 80px;
+*/
+border-radius: 45px;
+border:1px solid rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Username">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	font-size: 16px;
+	background: rgba(255, 255, 255, 80);
+	border-radius: 10px;
+	color: black;
+}
+QLineEdit:focus {
+	font-size: 10px; 
+}</string>
+           </property>
+           <property name="maxLength">
+            <number>20</number>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Quote">
+           <property name="minimumSize">
+            <size>
+             <width>150</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	font-size: 16px;
+	background: rgba(255, 255, 255, 80);
+	border-radius: 10px;
+	color: black;
+}
+QLineEdit:focus {
+	font-size: 10px; 
+}</string>
+           </property>
+           <property name="maxLength">
+            <number>32767</number>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Normal</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="readOnly">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgba(0,0,0,0);</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="1" column="1">
+             <widget class="QToolButton" name="toolButton_Change">
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 12px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+              </property>
+              <property name="text">
+               <string>修改账户</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QToolButton" name="toolButton_Logout">
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 12px
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+              </property>
+              <property name="text">
+               <string>退出账户</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QToolButton" name="toolButton_Delete">
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>-1</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 12px
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+              </property>
+              <property name="text">
+               <string>注销账户</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QToolButton" name="toolButton_Cancel">
+              <property name="styleSheet">
+               <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 12px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+              </property>
+              <property name="text">
+               <string>取消修改</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QToolButton" name="toolButton_Confirm">
+              <property name="styleSheet">
+               <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 12px;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+              </property>
+              <property name="text">
+               <string>确定修改</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_Book">
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 12px</string>
+           </property>
+           <property name="text">
+            <string>当前借阅书籍：</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QWidget" name="widget_3" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_4">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item row="0" column="0">
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Search">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>240</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 16px</string>
+           </property>
+           <property name="placeholderText">
+            <string>请输入用户名~~</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="checkBox">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-size: 12px</string>
+           </property>
+           <property name="text">
+            <string>精准</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_Search">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>40</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{
+	background-color: #2c3e50;
+	border: 4px solid #2c3e5080;
+    border-radius: 5px;
+	font-size: 18px
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	/*background-color: rgba(236, 240, 241, 0.5);*/
+	border: 1px solid  #bdc3c7;
+	color: #ecf0f1;
+	font-weight: bold;
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 2px outset #34495e80;  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 2px outset #34495e80;
+	border-right: none;
+	border-bottom:none;
+	background-color: #34495e
+}
+</string>
+           </property>
+           <property name="text">
+            <string>查询</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QListWidget" name="listWidget">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QListView {
+	font:  20px &quot;Microsoft YaHei UI Light&quot;;
+}
+
+QListView::item {
+    height: 45px;
+	border-bottom: 1px solid rgba(255,255,255,10);
+}
+
+QListView::item:hover {
+	background-color: transparent;
+	padding: 10px;
+	border-left: 3px solid rgb(130, 130, 130);
+}
+QListView::item:selected {
+	background-color: transparent;
+	color: black;
+	padding: 10px;
+	border-left: 3px solid black;
+}
+</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>213</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>23233</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

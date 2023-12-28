@@ -1,0 +1,57 @@
+{
+	"Users":	[{
+			"UserId":	2,
+			"Username":	"11",
+			"Password":	"0a7b0046c949fd5b4ca60ca9a0ceaef3",
+			"Salt":	"YaJxuzxL",
+			"isAdmin":	false,
+			"AvatarUrl":	"",
+			"Quote":	"This is 11",
+			"BorrowId":	0
+		}, {
+			"UserId":	3,
+			"Username":	"123",
+			"Password":	"778645bbcf08d549b45d3e475295dfef",
+			"Salt":	"P2rJcqCl",
+			"isAdmin":	false,
+			"AvatarUrl":	"",
+			"Quote":	"This is 123",
+			"BorrowId":	0
+		}, {
+			"UserId":	4,
+			"Username":	"1234",
+			"Password":	"8ef45601cc0482458f4cb63221eb4c0a",
+			"Salt":	"66WriNmg",
+			"isAdmin":	false,
+			"AvatarUrl":	"",
+			"Quote":	"This is 1234",
+			"BorrowId":	0
+		}, {
+			"UserId":	5,
+			"Username":	"武藏小次郎",
+			"Password":	"cbc93f513dfea9da0dc7f7721610cd9c",
+			"Salt":	"O4s2UYOF",
+			"isAdmin":	false,
+			"AvatarUrl":	"",
+			"Quote":	"This is 武藏小次郎",
+			"BorrowId":	0
+		}, {
+			"UserId":	1,
+			"Username":	"admin",
+			"Password":	"a99c2f8f83ccf527dc8aa86f5f7717fc",
+			"Salt":	"Y8XBPk75",
+			"isAdmin":	true,
+			"AvatarUrl":	"",
+			"Quote":	"This is admin",
+			"BorrowId":	5
+		}, {
+			"UserId":	6,
+			"Username":	"aa",
+			"Password":	"1c8883d3e764a32e7dad8a88db440e64",
+			"Salt":	"i1fGukez",
+			"isAdmin":	false,
+			"AvatarUrl":	"",
+			"Quote":	"This is aa",
+			"BorrowId":	0
+		}]
+}

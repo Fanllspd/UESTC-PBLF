@@ -1,0 +1,50 @@
+@startuml
+
+left to right direction
+title **图书管理系统**
+
+(显示书籍数据) as (Output)
+(增加书籍数据) as (Add)
+(更改书籍数据) as (Change)
+(还书/借书) as (BorrowOrReturn)
+(删除（单一/所有）数据) as (Delete)
+(查询书籍数据) as (Search)
+(保存书籍数据（任意位置）) as (SaveBooks)
+
+(显示用户数据) as (OutputUsers)
+(增加用户数据) as (AddUser)
+(更改用户数据) as (ChangeUser)
+(删除用户数据) as (DeleteUser)
+(查询用户数据) as (SearchUsers)
+(重载数据) as (Reload)
+(客户端自定义管理) as (Opacity)
+
+Admin ===> (Output)
+Admin ===> (BorrowOrReturn)
+Admin ===> (Search)
+Admin ===> (OutputUsers)
+Admin ===> (AddUser)
+Admin ===> (ChangeUser)
+Admin ===> (DeleteUser)
+Admin ===> (SearchUsers)
+Admin ===> (Reload)
+Admin ===> (Opacity)
+
+Admin -left-> (管理用户数据)
+Admin -> (Delete)
+Admin -up-> (SaveBooks)
+Admin -up-> (Add)
+Admin -left-> (Change)
+
+(Output) <==== Users
+(BorrowOrReturn) <==== Users
+(Search) <==== Users
+(OutputUsers) <==== Users
+(AddUser) <==== Users
+(ChangeUser) <==== Users
+(DeleteUser) <==== Users
+(SearchUsers) <==== Users
+(Reload) <==== Users
+(Opacity) <==== Users
+
+@enduml

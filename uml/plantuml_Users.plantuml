@@ -1,0 +1,114 @@
+@startuml LibraryManagementSystem
+
+title **用户界面**
+
+start 
+:打开界面;
+:显示相关数据(用户名/个性签名/当前借阅书籍/用户列表);
+:设置（用户/个性签名）不可编辑;
+:账户管理;
+if(用户类型) then (管理员)
+    split
+        :点击退出账号;
+        :清除自动登录信息文件;
+        :发送信号给主界面，
+        令其关闭节目，并打开登录界面;
+        stop
+    split again
+        :点击注销账号;
+        if(询问是否删除？) then (yes)
+            :清除自动登录信息文件;
+            :遍历用户列表，找到并删除;
+        else(not)
+        endif
+        :关闭询问界面;
+        stop
+    split again
+        :点击修改账户;
+        :隐藏“修改账户”按钮,
+        显示“确认修改”和“取消修改”按钮;
+        :设置（用户/个性签名）可编辑;
+        if(点击) then (确认)
+            :遍历用户链表;
+            if(重名？) then(not)
+                :进行修改;
+            else(yes)
+            endif 
+        else(取消)
+        endif
+        :隐藏“确认修改”和“取消修改”按钮，
+        显示“修改账户”按钮;
+    split again
+        :点击查询;
+        if(输入为空?) then (yes)
+            :返回整个用户表;
+        else(not)
+            if(精准) then(yes)
+                :遍历链表一一强比对;
+            else(not)
+                :遍历链表一一正则比对;
+            endif
+            :返回结果链表;
+        endif
+        :回显;
+        stop
+    split again
+        :点击用户;
+        split
+            :更改用户用户名或密码;
+            :遍历用户表获得相关数据并更改;
+        split again
+            :删除用户;
+        end split
+        stop
+    end split
+    stop
+else(普通用户)
+    split
+        :点击退出账号;
+        :清除自动登录信息文件;
+        :发送信号给主界面，
+        令其关闭节目，并打开登录界面;
+        stop
+    split again
+        :点击注销账号;
+        if(询问是否删除？) then (yes)
+            :清除自动登录信息文件;
+            :遍历用户列表，找到并删除;
+        else(not)
+        endif
+        :关闭询问界面;
+        stop
+    split again
+        :点击修改账户;
+        :隐藏“修改账户”按钮,
+        显示“确认修改”和“取消修改”按钮;
+        :设置（用户/个性签名）可编辑;
+        if(点击) then (确认)
+            :遍历用户链表;
+            if(重名？) then(not)
+                :进行修改;
+            else(yes)
+            endif 
+        else(取消)
+        endif
+        :隐藏“确认修改”和“取消修改”按钮，
+        显示“修改账户”按钮;
+    split again
+        :查询;
+        if(输入为空?) then (yes)
+            :返回整个用户表;
+        else(not)
+            if(精准) then(yes)
+                :遍历链表一一强比对;
+            else(not)
+                :遍历链表一一正则比对;
+            endif
+            :返回结果链表;
+        endif
+        :回显;
+        stop
+    end split
+    stop
+
+@enduml

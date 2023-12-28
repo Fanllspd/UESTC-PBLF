@@ -1,0 +1,135 @@
+@startuml LibraryManagementSystem
+
+title 主界面
+
+start
+:打开主界面;
+:初始化用户系统和图书系统;
+:显示图书和用户信息;
+:根据用户信息更改借阅按钮信息;
+if(用户类型) then(管理员)
+    :功能选择;
+    split
+        :刷新;
+        :遍历链表重新显示数据;
+        stop
+    split again
+        :增加;
+        :弹出增加界面;
+        :输入相关信息;
+        if(点击) then(确定)
+            while(数据合法) is(不合法)
+                :弹窗提示;
+            endwhile(合法)
+                :相关数据加入链表指定位置;
+                :关闭增加界面;
+                stop
+        else(取消)
+            :关闭界面;
+            stop
+        endif
+    split again
+        :更改;
+        while (用户选中一行?) is (not)
+            :弹窗提示;
+        endwhile (yes) 
+        :弹出更改界面;
+        :把选中数据显示到新窗口;
+        if(点击) then(确定)
+            while(数据合法) is(不合法)
+                :弹窗提示;
+            endwhile(合法)
+                :变更相关数据;
+                :关闭更改界面;
+                stop
+        else(取消)
+            :关闭界面;
+            stop
+        endif
+    split again
+        :还书;
+        while (用户选中是否为借阅的书?) is (not)
+            :弹窗提示;
+        endwhile (yes) 
+            :链表选中书本数量++;
+            :按钮文字改为“借书”;
+            stop
+    split again
+        :借书;
+        while (用户选中的书籍数量>0?) is (not)
+            :弹窗提示;
+        endwhile (yes) 
+            :链表选中书本数量--;
+            :按钮文字改为“还书”;
+            stop
+    split again
+        :删除;
+        while (用户选中一行?) is (not)
+            :弹窗提示;
+        endwhile (yes) 
+        :遍历链表，找到相关数据free;
+        stop
+    split again
+        :查询;
+        if(输入为空?) then (yes)
+            :返回整个书本表;
+        else(not)
+            :获得搜索类型(书名/作者/种类);
+            if(精准) then(yes)
+                :遍历链表一一强比对;
+            else(not)
+                :遍历链表正则比对;
+            endif
+            :返回结果链表;
+        endif
+        :回显;
+        stop
+    split again
+        :点击标题排序;
+        stop
+    end split
+
+else(普通用户)
+    :功能选择;
+    split
+        :刷新;
+        :遍历链表重新显示数据;
+        stop
+    split again
+        :还书;
+        while (用户选中是否为借阅的书?) is (not)
+            :弹窗提示;
+        endwhile (yes) 
+            :链表选中书本数量++;
+            :按钮文字改为“借书”;
+            stop
+    split again
+        :借书;
+        while (用户选中的书籍数量>0?) is (not)
+            :弹窗提示;
+        endwhile (yes) 
+            :链表选中书本数量--;
+            :按钮文字改为“还书”;
+            stop
+    split again
+        :查询;
+        if(输入为空?) then (yes)
+            :返回整个书本表;
+        else(not)
+            :获得搜索类型(书名/作者/种类);
+            if(精准) then(yes)
+                :遍历链表一一强比对;
+            else(not)
+                :遍历链表正则比对;
+            endif
+            :返回结果链表;
+        endif
+        :回显;
+        stop
+    split again
+        :点击标题排序;
+        stop
+    end split
+stop
+
+@enduml

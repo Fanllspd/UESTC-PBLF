@@ -1,0 +1,51 @@
+@startuml
+
+title **图书管理系统**
+
+class Books{
+  +void InitBooksList(BooksList **pL)
+  +void InitBooksInfo(BooksInfo *info, cJSON *arr)
+  ..
+  +void OutputOneBook(BooksList *L, QStandardItemModel *model,int row)
+  +void OutputAllBooks(BooksList *L,QStandardItemModel *model)
+  ..
+  +bool InsertBook(BooksList *L, QList<QLineEdit *> lineEdits, int InsertPos, bool isAvailable, bool iseBook)
+  +bool DeleteBooks(BooksList *L, QItemSelectionModel *selectionModel)
+  +void DeleteAllBooks(BooksList **L)
+  +BooksList *SearchBook(BooksList *L, char *books_id, int type, bool isStrict)
+  +bool ChangeBook(BooksList *L, QList<QLineEdit *> lineEdits, int BookId, bool isAvailable, bool iseBook)
+  ..
+  +bool BorrowBook(BooksList *L, UsersList *uL, int bookId, int UserId)
+  +bool ReturnBook(BooksList *L, UsersList *uL, int bookId, int UserId)
+  ..
+  +bool SaveBooksInfo(BooksList *L, QString path)
+}
+
+class Users{
+  +void InitUsersList(UsersList **pL)
+  +void InitUsersInfo(UserInfo *info, cJSON *arr)
+  ..
+  +bool InsertUser(UsersList *L, UserInfo info)
+  +bool ChangeUser(UsersList *L, UserInfo info)
+  +bool DeleteUser(UsersList *L, int UserId)
+  +bool SaveUsersInfo(UsersList *L)
+  +UsersList* SearchUser(UsersList *uL, QString uname, bool isStrict)
+  +void OutputAllUsers(UsersList *uList, QListWidget *listWidget, int nowUserId)
+  
+}
+
+class Utils{
+  +QString generateSalt(int length)
+  +QString calculateSaltedMD5(const QString &data, const QString &salt)
+  +bool verifyPassword(const QString &inputPassword, const QString &storedSalt, const QString &storedHashedPassword)
+  ..
+  +bool ChangeUserinfo(UserInfo info, QString newUname, QString newQuote)
+  +void ClearAutoSave()
+  +cJSON* ReadJsonFile(FILE *fp)
+  +cJSON* ReadAutoSave(cJSON **root)
+  +cJSON* ReadUsers(cJSON **root)
+  +bool SaveJsonToFile(cJSON *root, QString filename)
+  +void ReloadFile(BooksList **pL)
+}
+
+@enduml

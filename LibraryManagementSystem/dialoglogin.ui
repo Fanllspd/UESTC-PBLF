@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogLogin</class>
+ <widget class="QDialog" name="DialogLogin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>330</width>
+    <height>470</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>330</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>330</width>
+    <height>470</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>9</number>
+   </property>
+   <property name="topMargin">
+    <number>9</number>
+   </property>
+   <property name="rightMargin">
+    <number>9</number>
+   </property>
+   <property name="bottomMargin">
+    <number>9</number>
+   </property>
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QWidget" name="widget_Login" native="true">
+     <property name="minimumSize">
+      <size>
+       <width>312</width>
+       <height>452</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>312</width>
+       <height>452</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#widget_Login{
+background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+ stop:0 #bbf0f3,
+stop:0.3 #b0efdd,
+stop:0.5 #b9ebbc,
+stop:0.8 #d4e19b,
+stop:1 #f6d285);
+border-radius: 10px;
+border: 1px solid rgb(194, 194, 194);
+}
+/*
+background-image: linear-gradient(to right bottom, #, #, #, #, #);
+*/</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>9</number>
+      </property>
+      <property name="topMargin">
+       <number>9</number>
+      </property>
+      <property name="rightMargin">
+       <number>9</number>
+      </property>
+      <property name="bottomMargin">
+       <number>9</number>
+      </property>
+      <item alignment="Qt::AlignRight">
+       <widget class="QToolButton" name="toolButton_close">
+        <property name="minimumSize">
+         <size>
+          <width>34</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>28</width>
+          <height>24</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QToolButton{
+	background-color:rgba(44, 42, 56, 0) 
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	background-color: rgba(255, 0, 0,150)
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	border-left: 1px outset rgb(60, 60, 70);  /* 左边框宽度3像素、突出显示、颜色为深深灰 */
+	border-top: 1px outset rgb(60, 60, 70);
+	background-color: rgb(66, 66, 78);
+}
+
+QPushButton:default {
+    border-color: navy; /* make the default button prominent */
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="source/dark/darkstyle.qrc">
+          <normaloff>:/qss_icons/dark/rc/window_close.png</normaloff>:/qss_icons/dark/rc/window_close.png</iconset>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="label_Avatar">
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>100</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">/*
+min-width:  80px;
+max-width:  80px;
+min-height: 80px;
+max-height: 80px;
+*/
+border-radius: 45px;
+border:1px solid rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QWidget" name="widget" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>250</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>250</width>
+          <height>250</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background: rgba(255, 255, 255,0 );
+selection-background-color: rgb(85, 170, 255)</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Username">
+           <property name="minimumSize">
+            <size>
+             <width>232</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>232</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	font-size: 16px;
+	background: rgba(255, 255, 255, 80);
+	border-radius: 10px;
+	color: black;
+}
+QLineEdit:focus {
+	font-size: 10px; 
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>用户名</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_Password">
+           <property name="minimumSize">
+            <size>
+             <width>232</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>232</width>
+             <height>45</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>-1</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit {
+	font-size: 16px;
+	background: rgba(255, 255, 255, 80);
+	border-radius: 10px;
+	color: black;
+}
+QLineEdit:focus {
+	font-size: 10px; 
+}</string>
+           </property>
+           <property name="maxLength">
+            <number>12</number>
+           </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>密码</string>
+           </property>
+           <property name="clearButtonEnabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item alignment="Qt::AlignTop">
+          <widget class="QWidget" name="widget" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>232</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>232</width>
+             <height>30</height>
+            </size>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <property name="leftMargin">
+             <number>9</number>
+            </property>
+            <property name="topMargin">
+             <number>6</number>
+            </property>
+            <item>
+             <widget class="QCheckBox" name="checkBox">
+              <property name="minimumSize">
+               <size>
+                <width>80</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>80</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QCheckBox{
+	color:rgb(255, 255, 255);	
+	font: 12px &quot;Microsoft YaHei UI Light&quot;;
+}
+
+QCheckBox:hover{
+	color:rgb(85, 170, 255);
+	font-weight: bold;
+}
+
+QCheckBox:pressed{
+	color:rgba(85, 170, 255, 150);
+	font-weight: bold;
+}</string>
+              </property>
+              <property name="text">
+               <string>自动登录</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item alignment="Qt::AlignVCenter">
+             <widget class="QLabel" name="label_FindPwd">
+              <property name="minimumSize">
+               <size>
+                <width>60</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>60</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+	color:rgb(255, 255, 255);	
+	font: 12px &quot;Microsoft YaHei UI Light&quot;;
+}
+
+QLabel:hover{
+	color:rgb(85, 170, 255);
+	font-weight: bold;
+}
+
+QLabel:pressed{
+	color:rgba(85, 170, 255, 150);
+	font-weight: bold;
+}</string>
+              </property>
+              <property name="text">
+               <string>找回密码</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_Register">
+              <property name="minimumSize">
+               <size>
+                <width>30</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>25</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>-1</pointsize>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel{
+	color:rgb(255, 255, 255);	
+	font: 12px &quot;Microsoft YaHei UI Light&quot;;
+}
+
+QLabel:hover{
+	color:rgb(85, 170, 255);
+	font-weight: bold;
+}
+
+QLabel:pressed{
+	color:rgba(85, 170, 255, 150);
+	font-weight: bold;
+}</string>
+              </property>
+              <property name="text">
+               <string>注册</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="toolButton_Comfirm">
+           <property name="minimumSize">
+            <size>
+             <width>232</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>232</width>
+             <height>35</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI Light</family>
+             <pointsize>11</pointsize>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QToolButton{
+	background-color: rgb(246, 210, 133);
+	border: 1px solid  rgba(246, 210, 133, 50);
+    border-radius: 10px;
+	color: #ecf0f1;
+}
+
+/* 鼠标悬停 */
+QToolButton:hover{
+	background-color: rgba(246, 210, 133, 150);
+}
+
+/* 点击和按下 */
+QToolButton:pressed,QToolButton:checked{
+	/*border-left: 1px solid #34495e80; 
+	border-top: 1px solid #34495e80;
+	border-right: none;
+	border-bottom:none;*/
+	background-color: rgba(246, 210, 133, 200);
+	color: rgba(236, 240, 241, 60);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>登录</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="source/dark/darkstyle.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,32 @@
+@startuml LibraryManagementSystem
+
+title **设置界面**
+
+start
+:打开设置界面;
+split
+    :界面透明度设置;
+    :打开获得滑动条数值;
+    :发送信号给主界面，调用相关函数设置透明度;
+    stop
+split again
+    :重载数据;
+    :删除书本表，并重新读取文件初始化和回显;
+    stop
+split again
+    :保存数据;
+    :弹出目录选择;
+    :使用相关库
+    按照指定数据类型储存到指定位置;
+    stop
+split again
+    :删除所有数据（需要手动保存）;
+    if(询问两次) then(yes)
+        :遍历链表逐一free;
+    else(not)
+    endif
+    stop
+end split
+stop
+
+@enduml

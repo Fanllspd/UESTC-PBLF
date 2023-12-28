@@ -1,0 +1,21 @@
+@startuml LibraryManagementSystem
+
+title **登录**
+
+start
+:开始;
+if (自动登录?) then (false)
+    while(打开登录界面) is (找回密码)
+        :暂不支持;
+    endwhile(登录)
+    
+    while(账号密码正确？) is (错误)
+        :弹窗提示错误;
+    endwhile(正确)
+else(true)
+endif
+:保存自动登录信息;
+:打开主界面;
+
+
+@enduml

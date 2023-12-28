@@ -1,0 +1,13 @@
+{
+	"AutoSave":	{
+		"UserId":	1,
+		"Username":	"admin",
+		"Password":	"a99c2f8f83ccf527dc8aa86f5f7717fc",
+		"Salt":	"Y8XBPk75",
+		"Check":	true,
+		"isAdmin":	true,
+		"Deadline":	"1703777418",
+		"Quote":	"This is admin",
+		"BorrowId":	5
+	}
+}

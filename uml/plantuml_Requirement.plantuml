@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+title **图书管理系统**
+
+(个人信息管理) as (PersonalManagement)
+(借阅管理) as (BorrowOrReturn)
+(库存管理) as (RemainManagement)
+(客户端管理) as (ClientManagement)
+
+(用户管理) as (UsersManagement)
+(数据管理) as (DataManagement)
+(角色管理) as (RoleManagement)
+
+Admin权限 ---> (PersonalManagement)
+Admin权限 ---> (BorrowOrReturn)
+Admin权限 ---> (RemainManagement)
+Admin权限 ---> (ClientManagement)
+
+Admin权限 -left-> (UsersManagement)
+Admin权限 -right-> (DataManagement)
+Admin权限 -up-> (RoleManagement)
+
+(PersonalManagement) <--- Users权限
+(BorrowOrReturn) <--- Users权限
+(RemainManagement) <--- Users权限
+(ClientManagement) <--- Users权限
+
+@enduml
